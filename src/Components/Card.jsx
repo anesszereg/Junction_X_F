@@ -1,6 +1,6 @@
-
-import { Box } from "@mui/material"
+import {Box} from "@mui/material"
 function Card() {
+ 
   return (
 <Box sx={{width:"274px", height:"385px" , borderRadius: '16px',
     border: '1px solid #E5E5E5',
