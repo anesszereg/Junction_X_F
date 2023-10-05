@@ -9,10 +9,10 @@ function Navbar() {
     display:"flex",
     alignItems:"center",
     justifyContent:"space-between",
-    margin:" 20PX 100px",
+    margin:" 20PX 48px",
     padding:"0 40px",
-    position:"absolute",
-    width:"calc(100% - 280px)",
+   
+    width:"100%",
     height:"80px",
     top:"0",
     border:"1px solid #E5E5E5 ",
