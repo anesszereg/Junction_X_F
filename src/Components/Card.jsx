@@ -1,11 +1,10 @@
-
-import { Box } from "@mui/material"
+import {Box} from "@mui/material"
 function Card() {
-  return (
-<Box>
-    
-</Box>
-  )
+    return (
+        <Box>
+          
+        </Box>
+    )
 }
 
 export default Card
