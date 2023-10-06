@@ -10,24 +10,38 @@ import Navbar from '../../Layout/Defaultlayout/Navbar'
 
 function Dashboard() {
     return (
-        <Box padding={'186px 157px '}>
-             <Box display='flex' position={'absolute'} width={'100%'}>
 
-<Drawer/>
-<Navbar/>
-</Box>
-            <Schedular/>
-            <Box display={'flex'} flexDirection={'column'} gap={'24px'} marginTop={'24px'}>
+        <Box display={'flex'}
+            gap='33px'>
+            <Box>
 
-            <TasksCard/>
-            <TasksCard/>
-            <TasksCard/>
+
+                <Schedular/>
+                <Box display={'flex'}
+                    flexDirection={'column'}
+                    gap={'24px'}
+                    marginTop={'24px'}>
+
+                    <TasksCard/>
+                    <TasksCard/>
+                    <TasksCard/>
+                </Box>
             </Box>
-            
+            <Box display={'flex'}
+                gap='33px'>
 
-           <Card title="to do"  progesse={false}/>
-           <Card  title="In Progress" progesse={true}/>
-           <ChatGpt/>
+                <Box display={'flex'}
+                    flexDirection={'column'}
+                    gap={'33px'}>
+
+
+                    <Card title="to do"
+                        progesse={false}/>
+                    <Card title="In Progress"
+                        progesse={true}/>
+                </Box>
+                <ChatGpt/>
+            </Box>
         </Box>
     )
 }

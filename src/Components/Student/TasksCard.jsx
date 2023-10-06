@@ -101,7 +101,12 @@ function TasksCard() {
                         backgroundColor: '#5200FF',
                         color:'#fff',
                         fontSize:'12px',
-                        fontWeight:'500'
+                        fontWeight:'500',
+                        '&:hover': {
+                            backgroundColor: '#fff', 
+                            border:'1.5px solid #5200FF',
+                            color:'#5200FF'
+                          },
                     }
                 }>
                     Join Course

@@ -1,35 +1,40 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+// DefaultLayout.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Drawer from './Drawer';
 import LandingPage from '../../Pages/LandingPage';
 import SignUp from '../../Pages/Auth/SignUp';
 import Login from '../../Pages/Auth/Login';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Dashboard from '../../Pages/Student/Dashboard';
 
+const sections = {
+  Home: Dashboard,
+  signUp: SignUp,
+  login: Login,
+};
 
 const DefaultLayout = () => {
-    return (
-        <Router>
-            <div className="app">
-               
 
-                <Box >
-                    <Switch>
-                        <Route exact path="/"
-                            component={LandingPage}/>
-                        <Route exact path="/Dashboard"
-                            component={Dashboard}/>
-                        <Route path="/signUp"
-                            component={SignUp}/>
-                        <Route path="/login"
-                            component={Login}/>
+  const { section } = useParams();
+  const ContentComponent = sections[section] || LandingPage;
 
-                    </Switch>
-                </Box>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <div className="app">
+        <Box display="flex" position="absolute" width="100%">
+          <Drawer />
+          <Navbar />
+        </Box>
+
+
+        <Box padding="136px 137px" overflow="hidden">
+          <ContentComponent />
+        </Box>
+      </div>
+    </Router>
+  );
 };
 
 export default DefaultLayout;
