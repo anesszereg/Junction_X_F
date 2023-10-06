@@ -1,14 +1,14 @@
 
 import './App.css';
-// import DefaultLayout from './Layout/Defaultlayout';
-import LandingPage from './Pages/LandingPage';
+import DefaultLayout from './Layout/Defaultlayout';
+
 
 
 function App() {
   return (
     <div className="App">
-      {/* <DefaultLayout /> */}
-      <LandingPage/>
+      <DefaultLayout /> 
+    
     </div>
   );
 }

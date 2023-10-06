@@ -12,13 +12,9 @@ const DefaultLayout = () => {
     return (
         <Router>
             <div className="app">
-                <Box display='flex' position={'absolute'} width={'100%'}>
+               
 
-                    <Drawer/>
-                    <Navbar/>
-                </Box>
-
-                <Box padding={'186px 157px '}>
+                <Box >
                     <Switch>
                         <Route exact path="/"
                             component={LandingPage}/>
