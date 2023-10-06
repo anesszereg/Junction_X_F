@@ -1,5 +1,6 @@
 /* App.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Lexend:wght@300&family=Oswald&family=Poppins:wght@300;400&family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: 'FONTSPRING DEMO - Robson Extrabold';
   src: url('/src/assets/Demo_Fonts/Fontspring-DEMO-robson-bold.otf') format('opentype'); /* Précisez le format de police */
@@ -17,3 +18,57 @@
 .nav{
   font-family: 'Poppins', sans-serif;
 }
+
+#root {
+  width: 100vw;
+  height:100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+* {
+
+  font-family: "Outfit";
+
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #fff;
+}
+.primary-button {
+  padding: 8px 40px;
+  background-color: #ffba07;
+  border-radius: 400px;
+  border: 3px solid #000;
+  font: inherit;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px ;
+  font-size: 0.8em;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+
+.common-border {
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  
+}
+
+
+.contact-input {
+  width: 440px;
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 15px 28px;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+

@@ -3,6 +3,7 @@ import backImage from '../../assets/png/Rectangle 57.png'
 import Navbar from './Navbar'
 import First from './first'
 import Secound from './Secound'
+import Last from './last'
 
 function PrencipalContainer() {
     return (
@@ -14,6 +15,7 @@ function PrencipalContainer() {
            <Navbar/>
            <First></First>
            <Secound></Secound>
+           <Last></Last>
 
         </Box>
     )

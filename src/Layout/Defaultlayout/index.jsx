@@ -16,6 +16,7 @@ const sections = {
 };
 
 const DefaultLayout = () => {
+
   const { section } = useParams();
   const ContentComponent = sections[section] || LandingPage;
 
@@ -26,6 +27,7 @@ const DefaultLayout = () => {
           <Drawer />
           <Navbar />
         </Box>
+
 
         <Box padding="136px 137px" overflow="hidden">
           <ContentComponent />
