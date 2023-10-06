@@ -49,7 +49,7 @@ Chat GPT
   lineHeight: 'normal',}}>
     Write your prompt
     </Typography>
-<Box sx={{height:"50px", borderTop:"1px solid #D9D9D9 ",width:"100%",position:"relative"}}>
+<Box sx={{height:"50px", borderTop:"1px solid #D9D9D9 ",width:"100%",display:"flex" ,justifyContent:"space-between",alignItems:"center"}}>
 <input type="text" name="" id="" placeholder="Use ChatGPT" 
 style={{border:"none" , color: '#5C5B68',
   fontFamily: 'Outfit, sans-serif',
@@ -59,10 +59,11 @@ style={{border:"none" , color: '#5C5B68',
   display:"flex",
   alignItems:"center",
   justifyContent:"center",
-  padding:"0 10px",
+  paddingLeft:"10px",
+  
   fontWeight: 500,
-  lineHeight: 'normal',width:"100%",outline: 'none',}}/>
-<BsSend size={20} style={{position:"absolute ",left:"90%" ,top:"35%" ,color:"#5200FF"} } />
+  lineHeight: 'normal',width:"80%",outline: 'none',}}/>
+<BsSend size={20} style={{ color:"#5200FF",marginRight:"10px"} } />
 </Box>
     </Box>
    </Box>
