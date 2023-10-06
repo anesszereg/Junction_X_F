@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box,Avatar } from "@mui/material"
 import { BsMoon,BsSearch } from "react-icons/bs";
 import { LuBell } from "react-icons/lu";
 import { GoGlobe } from "react-icons/go";
@@ -35,6 +35,7 @@ function Navbar() {
         fontStyle: 'normal',
         fontWeight: 500,
         lineHeight: 'normal',
+        height:"32px"
       
       
     }}
@@ -47,12 +48,12 @@ function Navbar() {
       justifyContent:"space-between",
       gap:"20px",
      }}>
-      <GoGlobe style={{ width: '22px', height: '22px' }}/>
-<BsMoon  style={{ width: '22px', height: '22px' }}/>
-<LuBell style={{ width: '22px', height: '22px' }}/>
+      <GoGlobe size={22} style={{ cursor:"pointer" }}/>
+<BsMoon size={22} style={{ cursor:"pointer" }}/>
+<LuBell size={22}style={{ cursor:"pointer" }}/>
+<Avatar alt="Remy Sharp" src={image} sx={{ width: '48px', height: '48px',borderRadius:"50%", backgroundColor:"#ded1ff", display:"flex",alignItems:"center",
+      justifyContent:"center",cursor:"pointer"  }} />
 
-<img src={image} alt="" style={{ width: '48px', height: '48px',borderRadius:"50%", backgroundColor:"#ded1ff", display:"flex",alignItems:"center",
-      justifyContent:"center", }} />
      </Box>
    </Box>
   )
