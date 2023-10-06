@@ -9,13 +9,13 @@ import SignUp from "../Pages/Auth/SignUp";
 
 
 export const routes = [
-    {
-      path: RouteBase.landing,
-      exact: true,
-      name: "LandingPage",
-      component: LandingPage,
-      isPrivate: false,
-    },
+    // {
+    //   path: RouteBase.landing,
+    //   exact: true,
+    //   name: "LandingPage",
+    //   component: LandingPage,
+    //   isPrivate: false,
+    // },
     {
       path: RouteBase.login,
       exact: true,
@@ -29,6 +29,13 @@ export const routes = [
       exact: true,
       name: "signUp",
       component: SignUp,
+      isPrivate: false,
+    },
+    {
+      path: RouteBase.home,
+      exact: true,
+      name: "home",
+      component: LandingPage,
       isPrivate: false,
     },
 

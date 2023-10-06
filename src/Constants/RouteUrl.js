@@ -1,5 +1,6 @@
 export const RouteBase = {
     landing: '/' ,
     login:'/signIn',
-    signUp:'/SignUp'
+    signUp:'/SignUp',
+    home:'/HomePage'
 }
