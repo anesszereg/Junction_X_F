@@ -8,19 +8,36 @@ import ChatGpt from '../../Components/ChatGpt'
 
 function Dashboard() {
     return (
-        <Box>
-            <Schedular/>
-            <Box display={'flex'} flexDirection={'column'} gap={'24px'} marginTop={'24px'}>
+        <Box display={'flex'}
+            gap='33px'>
+            <Box>
 
-            <TasksCard/>
-            <TasksCard/>
-            <TasksCard/>
+                <Schedular/>
+                <Box display={'flex'}
+                    flexDirection={'column'}
+                    gap={'24px'}
+                    marginTop={'24px'}>
+
+                    <TasksCard/>
+                    <TasksCard/>
+                    <TasksCard/>
+                </Box>
             </Box>
-            
+            <Box display={'flex'}
+                gap='33px'>
 
-           <Card title="to do"  progesse={false}/>
-           <Card  title="In Progress" progesse={true}/>
-           <ChatGpt/>
+                <Box display={'flex'}
+                    flexDirection={'column'}
+                    gap={'33px'}>
+
+
+                    <Card title="to do"
+                        progesse={false}/>
+                    <Card title="In Progress"
+                        progesse={true}/>
+                </Box>
+                <ChatGpt/>
+            </Box>
         </Box>
     )
 }
