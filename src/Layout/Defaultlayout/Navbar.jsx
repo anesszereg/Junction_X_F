@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box,Avatar } from "@mui/material"
 import { BsMoon,BsSearch } from "react-icons/bs";
 import { LuBell } from "react-icons/lu";
 import { GoGlobe } from "react-icons/go";
@@ -51,9 +51,9 @@ function Navbar() {
       <GoGlobe size={22} style={{ cursor:"pointer" }}/>
 <BsMoon size={22} style={{ cursor:"pointer" }}/>
 <LuBell size={22}style={{ cursor:"pointer" }}/>
-
-<img src={image} alt="" style={{ width: '48px', height: '48px',borderRadius:"50%", backgroundColor:"#ded1ff", display:"flex",alignItems:"center",
+<Avatar alt="Remy Sharp" src={image} sx={{ width: '48px', height: '48px',borderRadius:"50%", backgroundColor:"#ded1ff", display:"flex",alignItems:"center",
       justifyContent:"center",cursor:"pointer"  }} />
+
      </Box>
    </Box>
   )
