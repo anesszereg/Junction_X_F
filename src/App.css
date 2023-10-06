@@ -1,0 +1,19 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Lexend:wght@300&family=Oswald&family=Poppins:wght@300;400&family=Roboto:wght@500&display=swap');
+@font-face {
+  font-family: 'FONTSPRING DEMO - Robson Extrabold';
+  src: url('/src/assets/Demo_Fonts/Fontspring-DEMO-robson-bold.otf') format('opentype'); /* Précisez le format de police */
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+/* Utilisation de la police dans votre composant React */
+.LOGO {
+  font-family: 'FONTSPRING DEMO - Robson Extrabold', sans-serif;
+  /* ... autres styles ... */
+}
+
+.nav{
+  font-family: 'Poppins', sans-serif;
+}
