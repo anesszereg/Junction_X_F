@@ -1,8 +1,11 @@
+import PrencipalContainer from "../Components/LandingPage/PrencipalContainer"
 
 
 function LandingPage() {
   return (
-    <div>LandingPage</div>
+    <div>
+        <PrencipalContainer/>
+    </div>
   )
 }
 
