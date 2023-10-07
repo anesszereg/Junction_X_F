@@ -15,7 +15,6 @@ import Page404 from "./Pages/page404/Page404";
 import Classesdashboard from "./Components/DashboardTeacher/ClassesDashboard/Classesdashboard";
 import CourseDashboard from "./Components/DashboardTeacher/CourseDashboard/CourseDashboard";
 
-
 const router = createBrowserRouter([
   {
     path: "*",
@@ -42,7 +41,7 @@ const router = createBrowserRouter([
     element: <KidsDashboard />,
   },
   {
-    path: "/AdultDashboard/Gameone",
+    path: "/KidsDashboard/Gameone",
     element: <Gameone />,
   },
   {
@@ -50,12 +49,12 @@ const router = createBrowserRouter([
     element: <Welcome />,
   },
   {
-    path:'/TeacherDashboard/classes',
-    element:<Classesdashboard/>
+    path: "/TeacherDashboard/classes",
+    element: <Classesdashboard />,
   },
   {
-    path:'/TeacherDashboard/course',
-    element:<CourseDashboard/>
+    path: "/TeacherDashboard/course",
+    element: <CourseDashboard />,
   },
 ]);
 

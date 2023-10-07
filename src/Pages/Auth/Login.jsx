@@ -23,15 +23,12 @@ const StudentLogin = () => {
     setPassword(!password);
   };
   const {
-    handleSubmit,
     control,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+
   const [student, setStudent] = useState(true);
   console.log(student);
   const handleStudentClick = () => {
@@ -51,7 +48,6 @@ const StudentLogin = () => {
           />
         </div>
         <div className="auth-content">
-          {/* <AuthShared></AuthShared> */}
           <div className="auth-icons">
             <img
               src={studentImage}
