@@ -13,7 +13,7 @@ function Gameone() {
                 <Navbar/>
             </Box>
 
-            <Box padding="136px 137px" overflow="hidden">
+            <Box padding="136px 0" overflow="hidden">
                 <Box sx={
                     {
                         width: "100%",
