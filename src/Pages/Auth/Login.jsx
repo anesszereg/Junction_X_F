@@ -113,17 +113,17 @@ const StudentLogin = () => {
             <p style={{ padding: "20px 7px" }}>I forgot my password !</p>
 
             <Box display={"flex"} justifyContent={"center"}>
-              <button type="submit" className="primary-btn">
-                <Link
-                  to={student ? "/welcome" : "/TeacherDashboard"}
-                  style={{
-                    textDecoration: "none",
-                    color: "#000",
-                  }}
-                >
+              <Link
+                to={student ? "/welcome" : "/TeacherDashboard"}
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                }}
+              >
+                <button type="submit" className="primary-btn">
                   Login
-                </Link>
-              </button>
+                </button>
+              </Link>
             </Box>
           </form>
           <p className="last-p">I don t have an account !</p>
