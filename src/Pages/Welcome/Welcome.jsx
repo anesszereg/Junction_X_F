@@ -1,4 +1,5 @@
 import {Box, Button, Typography} from '@mui/material'
+import { Link } from 'react-router-dom'
 // import { useHistory } from 'react-router'
 
 
@@ -29,9 +30,14 @@ function Welcome() {
                     color:'#000'
                 }
             }
-            // onClick={()=> history.push('/spline')}
+           
             >
+                <Link to='/NavigationMap' style={{
+                    textDecoration:'none',
+                    color:'#000'
+                }}>
                 Start
+                </Link>
             </Button>
         </Box>
     )

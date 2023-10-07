@@ -11,7 +11,7 @@ import Gameone from "./Pages/Student/Kids/Gameone";
 
 import Welcome from "./Pages/Welcome/Welcome";
 import Page404 from "./Pages/page404/Page404";
-
+import Spline from './Pages/Spline/Spline'
 import Classesdashboard from "./Components/DashboardTeacher/ClassesDashboard/Classesdashboard";
 import CourseDashboard from "./Components/DashboardTeacher/CourseDashboard/CourseDashboard";
 
@@ -55,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/TeacherDashboard/course",
     element: <CourseDashboard />,
+  },
+  {
+    path: "/NavigationMap",
+    element: <Spline/>,
   },
 ]);
 
