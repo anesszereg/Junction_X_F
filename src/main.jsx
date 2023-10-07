@@ -8,6 +8,8 @@ import DefaultLayout from './Layout/Defaultlayout/index'
 import TeacherDashboard from "./Pages/dashboard-teacher/TeacherDashboard";
 import KidsDashboard from "./Pages/Student/Kids/KidsDashboard";
 import Gameone from "./Pages/Student/Kids/Gameone";
+import Classesdashboard from "./Components/DashboardTeacher/ClassesDashboard/Classesdashboard";
+import CourseDashboard from "./Components/DashboardTeacher/CourseDashboard/CourseDashboard";
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
   {
     path:'/AdultDashboard/Gameone',
     element:<Gameone/>
+  },
+  {
+    path:'/TeacherDashboard/classes',
+    element:<Classesdashboard/>
+  },
+  {
+    path:'/TeacherDashboard/course',
+    element:<CourseDashboard/>
   },
 
  
