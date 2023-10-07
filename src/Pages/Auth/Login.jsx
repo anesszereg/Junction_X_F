@@ -33,15 +33,14 @@ const StudentLogin = () => {
     console.log(data);
   };
   const [student, setStudent] = useState(true);
-  console.log("value", student);
-  //   const [teacher, setTeacher] = useState(false);
+  console.log(student);
   const handleStudentClick = () => {
     setStudent(true);
   };
-
   const handleTeacherClick = () => {
     setStudent(false);
   };
+
   return (
     <>
       <div className="auth-container">
@@ -67,7 +66,7 @@ const StudentLogin = () => {
               onClick={handleTeacherClick}
             />
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form>
             <h1>{student ? "Student's" : "Teacher's"} Platform</h1>
             <h3>Login to your account to continue</h3>
             <div
@@ -120,7 +119,7 @@ const StudentLogin = () => {
             <Box display={"flex"} justifyContent={"center"}>
               <button type="submit" className="primary-btn">
                 <Link
-                  to={student ? "/welcome" : "/AdultDashboard"}
+                  to={student ? "/welcome" : "/TeacherDashboard"}
                   style={{
                     textDecoration: "none",
                     color: "#000",

@@ -9,8 +9,13 @@ import TeacherDashboard from "./Pages/dashboard-teacher/TeacherDashboard";
 import KidsDashboard from "./Pages/Student/Kids/KidsDashboard";
 import Gameone from "./Pages/Student/Kids/Gameone";
 import Welcome from "./Pages/Welcome/Welcome";
+import Page404 from "./Pages/page404/Page404";
 
 const router = createBrowserRouter([
+  {
+    path: "*",
+    element: <Page404 />,
+  },
   {
     path: "/",
     element: <App></App>,
