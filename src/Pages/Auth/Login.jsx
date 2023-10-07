@@ -85,7 +85,7 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img src={mailIcon} alt="icon" className="mail-icon" />
+              {/* <img src={mailIcon} alt="icon" className="mail-icon" /> */}
               <p>{errors.email?.message}</p>
             </div>
             <div>
@@ -102,12 +102,12 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img
+              {/* <img
                 src={eyeIcone}
                 onClick={handelPassword}
                 alt="icon"
                 className="eye-icon"
-              />
+              /> */}
               <p>{errors.password?.message}</p>
             </div>
             <p style={{ padding: "20px 7px" }}>I forgot my password !</p>
