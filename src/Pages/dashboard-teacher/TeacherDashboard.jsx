@@ -19,8 +19,8 @@ const TeacherDashboard = () => {
       <Sidebar onSelectComponent={handleComponentChange} />
       <Box marginTop={'64px'}>
       <HomeDashboard />
-        <Classesdashboard/>
-        <CourseDashboard />
+        {/* <Classesdashboard/>
+        <CourseDashboard /> */}
       </Box>
     </>
   );

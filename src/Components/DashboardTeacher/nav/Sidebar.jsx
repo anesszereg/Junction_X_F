@@ -19,6 +19,7 @@ import { RiGroupLine } from 'react-icons/ri';
 import { FiSettings, FiMoon } from 'react-icons/fi';
 import { IoMdNotificationsOutline } from 'react-icons/io';
 import logo from '../../../assets/Svgs/logo.svg'
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 260;
 
@@ -74,9 +75,11 @@ const menuItems = [
       />
     ),
     key: 'home',
+    path:'/'
   },
   {
     text: 'Classes',
+    path:'/TeacherDashboard/classes',
     icon: (
       <BsClipboard
         style={{
@@ -100,6 +103,7 @@ const menuItems = [
       />
     ),
     key: 'course',
+    path:'/TeacherDashboard/course'
   },
   {
     text: 'Chat',
@@ -112,6 +116,7 @@ const menuItems = [
         }}
       />
     ),
+    path:'/chat'
   },
   {
     text: 'Students',
@@ -124,6 +129,7 @@ const menuItems = [
         }}
       />
     ),
+    path:'/Student'
   },
   {
     text: 'Settings',
@@ -136,6 +142,7 @@ const menuItems = [
         }}
       />
     ),
+    path:'/Settings'
   },
 ];
 
@@ -242,12 +249,14 @@ function Sidebar({ onSelectComponent }) {
                   
                 {React.cloneElement(item.icon, { style: { color:selectedItem === index ? 'white' : 'black' , height:'24px' ,width:'24px'} })}
                 </ListItemIcon>
+                <Link to={item.path}  style={{textDecoration:'none' , color:'#000'}}>
                 <ListItemText
                   primary={item.text}
                   primaryTypographyProps={{
                     style: { fontWeight: 'bold', fontSize: '20px' },
                   }}
-                />
+                  />
+                  </Link>
               </ListItemButton>
             </ListItem>
           ))}
