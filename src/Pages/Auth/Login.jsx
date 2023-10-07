@@ -7,27 +7,21 @@ import eyeIcone from "../../assets/Svgs/eyeIcone.svg";
 import mailIcon from "../../assets/Svgs/mailIcon.svg";
 import studentImage from "../../assets/Svgs/student.svg";
 import teacherImage from "../../assets/Svgs/teacher.svg";
-import {Box} from '@mui/material' 
+import { Box } from "@mui/material";
 
 import "./Login.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const schema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("Invalid email format"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(6, "Password must be at least 6 characters"),
+  email: yup.string(),
+  password: yup.string(),
 });
 
 const StudentLogin = () => {
-const [password, setPassword] = useState(false)
-const handelPassword=()=>{
-  setPassword(!password);
-}
+  const [password, setPassword] = useState(false);
+  const handelPassword = () => {
+    setPassword(!password);
+  };
   const {
     handleSubmit,
     control,
@@ -39,14 +33,14 @@ const handelPassword=()=>{
     console.log(data);
   };
   const [student, setStudent] = useState(true);
-  //   const [teacher, setTeacher] = useState(false);
+  console.log(student);
   const handleStudentClick = () => {
     setStudent(true);
   };
-
   const handleTeacherClick = () => {
     setStudent(false);
   };
+
   return (
     <>
       <div className="auth-container">
@@ -72,10 +66,17 @@ const handelPassword=()=>{
               onClick={handleTeacherClick}
             />
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form>
             <h1>{student ? "Student's" : "Teacher's"} Platform</h1>
             <h3>Login to your account to continue</h3>
-            <div style={{gap:"10px",display:"flex",flexDirection:"column", alignItems:"center"}}>
+            <div
+              style={{
+                gap: "10px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <Controller
                 name="email"
                 control={control}
@@ -98,29 +99,36 @@ const handelPassword=()=>{
                 defaultValue=""
                 render={({ field }) => (
                   <input
-                    type={password? "text":"password"}
+                    type={password ? "text" : "password"}
                     className="contact-input auth-input"
                     {...field}
                     placeholder="Password"
                   />
                 )}
               />
-              <img src={eyeIcone} onClick={handelPassword} alt="icon" className="eye-icon" />
+              <img
+                src={eyeIcone}
+                onClick={handelPassword}
+                alt="icon"
+                className="eye-icon"
+              />
               <p>{errors.password?.message}</p>
             </div>
-            <p style={{padding:"20px 7px"}}>I forgot my password !</p>
+            <p style={{ padding: "20px 7px" }}>I forgot my password !</p>
 
-                  <Box display={'flex'} justifyContent={'center'} >
-
-            <button type="submit" className="primary-btn" >
-              <Link to='/AdultDashboard' style={{
-                textDecoration:'none',
-                color:'#000'
-              }}>
-              Login
-              </Link>
-            </button>
-                  </Box>
+            <Box display={"flex"} justifyContent={"center"}>
+              <button type="submit" className="primary-btn">
+                <Link
+                  to={student ? "/welcome" : "/TeacherDashboard"}
+                  style={{
+                    textDecoration: "none",
+                    color: "#000",
+                  }}
+                >
+                  Login
+                </Link>
+              </button>
+            </Box>
           </form>
           <p className="last-p">I don t have an account !</p>
         </div>
