@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { styled, alpha } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
@@ -18,7 +18,7 @@ import { BsClipboard, BsPerson } from 'react-icons/bs';
 import { RiGroupLine } from 'react-icons/ri';
 import { FiSettings, FiMoon } from 'react-icons/fi';
 import { IoMdNotificationsOutline } from 'react-icons/io';
-import PropTypes from 'prop-types';
+import logo from '../../../assets/Svgs/logo.svg'
 
 const drawerWidth = 260;
 
@@ -156,6 +156,7 @@ function Sidebar({ onSelectComponent }) {
           width: `calc(100% - ${drawerWidth}px)`,
           ml: `${drawerWidth}px`,
           backgroundColor: 'transparent',
+          boxShadow:' 0px 0px 4px 0px rgba(0, 0, 0, 0.25)'
         }}>
         <Toolbar style={{ backgroundColor: 'white' }}>
           <Search
@@ -216,17 +217,19 @@ function Sidebar({ onSelectComponent }) {
         variant="permanent"
         anchor="left">
         <Toolbar>
-          <Typography variant="h6" style={{ marginBottom: '110px' }}>
-            Logo
-          </Typography>
+          <Box display={'flex'} alignItems={'center'} justifyContent={'center'} width={'100%'} marginTop='20px' marginBottom={'40px'}>
+
+          <img src={logo} alt="" />
+          </Box>
         </Toolbar>
-        <List>
+        <List >
           {menuItems.map((item, index) => (
             <ListItem
               key={item.text}
               disablePadding
               onClick={() => handleItemClick(index)} // Handle item click
               style={{
+               
                 color: selectedItem === index ? 'white' : 'black',
                 backgroundColor:
                   selectedItem === index ? '#463DFF' : 'transparent',
@@ -235,7 +238,10 @@ function Sidebar({ onSelectComponent }) {
                 marginBottom: '26px',
               }}>
               <ListItemButton>
-                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemIcon >
+                  
+                {React.cloneElement(item.icon, { style: { color:selectedItem === index ? 'white' : 'black' , height:'24px' ,width:'24px'} })}
+                </ListItemIcon>
                 <ListItemText
                   primary={item.text}
                   primaryTypographyProps={{

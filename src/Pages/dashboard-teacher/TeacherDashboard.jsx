@@ -6,33 +6,22 @@ import CourseDashboard from '../../Components/DashboardTeacher/CourseDashboard/C
 import { Box } from '@mui/material';
 
 const TeacherDashboard = () => {
-  const [selectedComponent, setSelectedComponent] = useState('home'); // Initialize with 'home'
+  const [selectedComponent, setSelectedComponent] = useState('Home'); // Initialize with 'Home'
 
   // Define a function to change the selected component
   const handleComponentChange = (componentName) => {
     setSelectedComponent(componentName);
   };
 
-  // Conditional rendering based on selectedComponent
-  let displayedComponent;
-  switch (selectedComponent) {
-    case 'Home':
-      displayedComponent = <HomeDashboard />;
-      break;
-    case 'Classes':
-      displayedComponent = <Classesdashboard />;
-      break;
-    case 'Course':
-      displayedComponent = <CourseDashboard />;
-      break;
-    default:
-      displayedComponent = <HomeDashboard />;
-  }
 
   return (
     <>
       <Sidebar onSelectComponent={handleComponentChange} />
-      <Box marginTop={'64px'}>{displayedComponent}</Box>
+      <Box marginTop={'64px'}>
+      <HomeDashboard />
+        <Classesdashboard/>
+        <CourseDashboard />
+      </Box>
     </>
   );
 };

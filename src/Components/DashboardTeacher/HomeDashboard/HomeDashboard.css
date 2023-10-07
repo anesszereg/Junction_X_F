@@ -41,11 +41,11 @@
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  width: 65%;
+  width: 100%;
 }
 .textes {
   text-align: start;
-  width: 85%;
+  width: 100%;padding: 10px;
 }
 .circleImage {
   display: grid;
@@ -57,6 +57,7 @@
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
   margin-left: 25px;
+  gap:5px;
 }
 .stats div {
   display: flex;
@@ -75,7 +76,7 @@
 
 /*Best student*/
 .BestStudent{
-    border : 2px solid grey;
+
     border-radius: 3px;
     width: 320px;
     height: 237px;
@@ -84,6 +85,7 @@
     padding-left: 15px;
     position: relative;
     color: grey;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .BestStudent img{
     position: absolute;
@@ -114,9 +116,9 @@
 
 /*class graphs*/
 .moduleCourses{
-    border : 2px solid grey;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
-    width: 350px;
+    width: 392px;
     height: 367px;
     margin-left: 25px;
     color: grey;
@@ -175,7 +177,7 @@
       font-weight: 500;
 }
 .classProgress{
-    border : 2px solid grey;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     width: 340px;
     height: 237px;

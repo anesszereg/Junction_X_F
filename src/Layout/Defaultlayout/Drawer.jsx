@@ -24,35 +24,35 @@ function Drawer() {
             name: 'Home',
             activeIcon: homeW,
             icon: home,
-            path: '/AdultsDashboard/Home'
+            path: '/AdultDashboard'
         },
         {
-            name: 'Book',
+            name: 'GameOne',
             activeIcon: bookW,
             icon: book,
-            path: '/AdultsDashboard/Dashboard'
+            path: '/AdultDashboard/Gameone'
         },
         {
             name: 'Setting',
             activeIcon: settingW,
             icon: setting,
-            path: '/AdultsDashboard/setting'
+            path: '/AdultDashboard/setting'
         },
         {
             name: 'Message',
             activeIcon: messageW,
             icon: message,
-            path: '/AdultsDashboard/message'
+            path: '/AdultDashboard/message'
         }, {
             name: 'Trending',
             activeIcon: trendingW,
             icon: trending,
-            path: '/AdultsDashboard/trending'
+            path: '/AdultDashboard/trending'
         }, {
             name: 'Users',
             activeIcon: usersW,
             icon: users,
-            path: '/AdultsDashboard/users'
+            path: '/AdultDashboard/users'
         },
     ]
 

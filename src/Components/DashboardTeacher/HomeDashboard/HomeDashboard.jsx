@@ -7,6 +7,8 @@ import './HomeDashboard.css';
 import AnalyticsCard from './AnalyticsCard';
 import BestStudent from './BestStudent';
 import ModuleCard from './ModuleCard';
+import { Box, Typography } from '@mui/material';
+import {AiOutlineLaptop} from 'react-icons/ai'
 
 const columns = [
   { field: 'name', headerName: 'Name', width: 170 },
@@ -158,11 +160,32 @@ const HomeDashboard = () => {
               <MdMoreVert />
             </IconButton>
           </div>
-          <div className="modules">
-           <ModuleCard/>
-          </div>
+        <Box height={'60px'} width={'100%'} display={'flex'} gap='12px' padding={'20px'}>
+
+        <Box sx={{
+          display:'flex',
+          justifyContent:'center',
+          alignItems:'center',
+          height:"42px",
+          width:'42px',
+          backgroundColor:'#D9D9D9',
+          borderRadius:'8px'
+
+
+
+        }}>
+          <AiOutlineLaptop size={25} color='#000' />
+
+        </Box>
+        <Box >
+
+          <Typography fontSize={'18px'} fontWeight={'500'} textAlign={'start'} color={'#000'}>development</Typography>
+          <Typography fontSize={'10px'} fontWeight={'400'} textAlign={'start'} color={'#000'}>120 Questions</Typography>
+        </Box>
+
+        </Box>
         </div>
-        <div style={{ height: 370, width: '840px', marginLeft: '10px' }}>
+        <div style={{ height: 370, width: '100%', marginLeft: '10px' }}>
           <DataGrid
             rows={rows}
             columns={columns}

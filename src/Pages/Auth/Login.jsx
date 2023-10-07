@@ -11,6 +11,7 @@ import {Box} from '@mui/material'
 
 import "./Login.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const schema = yup.object().shape({
   email: yup
     .string()
@@ -111,8 +112,13 @@ const handelPassword=()=>{
 
                   <Box display={'flex'} justifyContent={'center'} >
 
-            <button type="submit" className="primary-btn">
+            <button type="submit" className="primary-btn" >
+              <Link to='/AdultDashboard' style={{
+                textDecoration:'none',
+                color:'#000'
+              }}>
               Login
+              </Link>
             </button>
                   </Box>
           </form>
